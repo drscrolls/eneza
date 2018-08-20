@@ -1,0 +1,76 @@
+<?php
+
+
+include 'dbconnect.php';
+ob_start();
+session_start();
+
+
+?>
+<style type="text/css">
+	.header{
+		background: #dededd;
+		margin-bottom: 20px;
+	}
+	.top-header{
+		margin-bottom: 20px;
+	}
+</style>
+<div class="header-section">
+			<!----- start-header---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="top-header">
+						<div class="logo">
+							<a href="#"><img src="images/logo.png" title="logo" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="<?php if($_SESSION['page']=='Home'){echo 'active';}else{echo 'page-scroll';} ?>"><a href="./">Home </a></li>
+								<li class="<?php if($_SESSION['page']=='Tutorials'){echo 'active';}else{echo 'page-scroll';} ?>"><a href="tutorials.php" class="scroll">Tutorials</a></li>
+								<li class="<?php if($_SESSION['page']=='Quizzes'){echo 'active';}else{echo 'page-scroll';} ?>"><a href="quizzes.php" class="scroll">Quizzes</a></li>
+								<li class="<?php if($_SESSION['page']=='Subjects'){echo 'active';}else{echo 'page-scroll';} ?>"><a href="subjects.php" class="scroll">Subjects </a></li>
+								<li class="<?php if($_SESSION['page']=='Courses'){echo 'active';}else{echo 'page-scroll';} ?>"><a href="courses.php" class="scroll">Courses</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----- start-slider---->
+			<!----start-slider-script---->
+			
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+
+
+			        <li>
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<h1><span>Tutorials</span></h1>
+			          		<h2>Made to modify and use anywhere</h2>
+			          		
+			          		<div class="clearfix"> </div>
+			          		<div class="big-btns col-md-6" style="margin: 2px;">
+			          			<a class="col-md-5" href="#"><label> </label>Tutorials</a>
+			          			<a class="col-md-5" href="#"><label> </label>Quizzes</a>
+			          			<a class="col-md-5" href="#"><label> </label>Subjects</a>
+			          			<a class="col-md-5" href="#"><label> </label>Courses</a>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+
+
+
+
+			      </ul>
+			    </div>
+			    <div class="clearfix"> </div>
+			    
+			<!----- //End-slider---->
+			</div>
+			
